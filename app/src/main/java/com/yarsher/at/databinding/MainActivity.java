@@ -14,9 +14,7 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_main);
 
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         ContactInfo contactInfo = new ContactInfo("Yar", "Sher");
-
         activityMainBinding.setContact(contactInfo);
 
 
