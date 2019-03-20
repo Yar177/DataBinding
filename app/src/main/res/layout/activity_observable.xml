@@ -7,17 +7,15 @@
     >
 
     <data>
-        <variable
-            name="contact"
-            type="com.yarsher.at.databinding.ContactInfo" />
 
-        <variable
-            name="onClickHandler"
-            type="com.yarsher.at.databinding.MainActivity.ClickHandler"
-            />
         <variable
             name="user"
             type="com.yarsher.at.databinding.User"
+            />
+
+        <variable
+            name="observableClickHandler"
+            type="com.yarsher.at.databinding.ObservableAct.ObservableClickHandler"
             />
 
     </data>
@@ -42,7 +40,7 @@
         <include
             android:id="@+id/content"
             layout="@layout/content_observable"
-            bind:contact="@{contact}"
+
             bind:user="@{user}"
 
             />

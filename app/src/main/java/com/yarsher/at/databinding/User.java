@@ -18,8 +18,6 @@ public class User extends BaseObservable {
         return lastName;
     }
 
-
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
         notifyPropertyChanged(BR.firstName);
