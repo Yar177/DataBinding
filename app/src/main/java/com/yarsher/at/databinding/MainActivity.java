@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void onButtonClickPassParameters(View view, ContactInfo contactInfo){
-            Toast.makeText(context, "Parameters Passes \nFirst Name:" + contactInfo.firstName
+            Toast.makeText(context, "Passes Parameters:\nFirst Name:" + contactInfo.firstName
                     + "\nLast Name: " + contactInfo.lastName, Toast.LENGTH_LONG).show();
         }
 
