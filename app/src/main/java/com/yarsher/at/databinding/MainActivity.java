@@ -1,6 +1,7 @@
 package com.yarsher.at.databinding;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ClickHandler clickHandler;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,19 @@ public class MainActivity extends AppCompatActivity {
         clickHandler = new ClickHandler(this);
         activityMainBinding.content.setOnClickHandler(clickHandler);
 
+        user = new User();
+        user.setFirstName("Android");
+        user.setLastName("Droid");
+
+        activityMainBinding.setUser(user);
+
+
+
+    }
+
+    public void goToObservable(View view) {
+        Intent intent = new Intent(this, ObservableAct.class);
+        startActivity(intent);
     }
 
 

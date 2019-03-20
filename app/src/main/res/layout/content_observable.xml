@@ -79,50 +79,15 @@
             android:orientation="vertical">
 
 
-            <TextView
-                android:id="@+id/firstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@{contact.firstName}"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/lastName"
+
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@{contact.lastName}"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:layout_margin="20dp"
+
 
                 />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:onClick="@{onClickHandler::onButtonClick}"
-                android:text="Click ---> Toast" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:onLongClick="@{onClickHandler::onLongClick}"
-                android:text="Long Click ---> Long Toast" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:onClick="@{(v)->onClickHandler.onButtonClickPassParameters(v, contact)}"
-                android:text="Click ---> Pass Parameters"
-
-                />
-
-
 
 
         </LinearLayout>

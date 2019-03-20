@@ -15,6 +15,10 @@
             name="onClickHandler"
             type="com.yarsher.at.databinding.MainActivity.ClickHandler"
             />
+        <variable
+            name="user"
+            type="com.yarsher.at.databinding.User"
+            />
 
     </data>
 
@@ -39,7 +43,17 @@
         android:id="@+id/content"
         layout="@layout/content_main"
         bind:contact="@{contact}"
+        bind:user="@{user}"
 
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:onClick="goToObservable"
+        android:text="go 2 observable"
         />
 
 
