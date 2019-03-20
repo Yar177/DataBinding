@@ -31,10 +31,7 @@ public class MainActivity extends AppCompatActivity {
         user = new User();
         user.setFirstName("Android");
         user.setLastName("Droid");
-
         activityMainBinding.setUser(user);
-
-
 
     }
 
