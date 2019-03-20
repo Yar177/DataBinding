@@ -10,6 +10,11 @@
         <variable
             name="contact"
             type="com.yarsher.at.databinding.ContactInfo" />
+        
+        <variable
+            name="onClickHandler"
+            type="com.yarsher.at.databinding.MainActivity.ClickHandler"
+            />
 
     </data>
 

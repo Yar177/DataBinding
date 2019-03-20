@@ -11,6 +11,9 @@ import com.yarsher.at.databinding.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private ClickHandler clickHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,24 +24,21 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.setContact(contactInfo);
         setSupportActionBar(activityMainBinding.myToolbar);
 
+        clickHandler = new ClickHandler(this);
+        activityMainBinding.content.setOnClickHandler(clickHandler);
+
     }
 
 
-    public class clickHandler{
-
+    public class ClickHandler{
         private Context context;
-
-        public clickHandler(Context context) {
+        public ClickHandler(Context context) {
             this.context = context;
         }
-
         public void onButtonClick(View view){
             Toast.makeText(context, "Button Click Event", Toast.LENGTH_LONG).show();
         }
+   }
 
 
-
-
-
-    }
 }
