@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         ContactInfo contactInfo = new ContactInfo("Yar", "Sher");
         activityMainBinding.setContact(contactInfo);
         setSupportActionBar(activityMainBinding.myToolbar);
-
         clickHandler = new ClickHandler(this);
         activityMainBinding.content.setOnClickHandler(clickHandler);
 
@@ -35,9 +34,22 @@ public class MainActivity extends AppCompatActivity {
         public ClickHandler(Context context) {
             this.context = context;
         }
+
         public void onButtonClick(View view){
-            Toast.makeText(context, "Button Click Event", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Button Click Event", Toast.LENGTH_SHORT).show();
         }
+
+        public boolean onLongClick(View view){
+            Toast.makeText(context, "Button Looooooong Click Event", Toast.LENGTH_LONG).show();
+        return false;
+        }
+
+        public void onButtonClickPassParameters(View view, ContactInfo contactInfo){
+            Toast.makeText(context, "Parameters Passes \nFirst Name:" + contactInfo.firstName
+                    + "\nLast Name: " + contactInfo.lastName, Toast.LENGTH_LONG).show();
+        }
+
+
    }
 
 
