@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public boolean onLongClick(View view){
-            Toast.makeText(context, "Button Looooooong Click Event", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Button Loog Click Event", Toast.LENGTH_LONG).show();
         return false;
         }
 
